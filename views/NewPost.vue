@@ -65,7 +65,7 @@ export default {
       }
 
       try {
-        const response = await fetch('ttps://vue-blog-68392-default-rtdb.firebaseio.com/posts.json', {
+        const response = await fetch('https://vue-blog-68392-default-rtdb.firebaseio.com/posts.json', {
           method: 'POST',
           body: JSON.stringify({
             title: this.titleInput.val,
