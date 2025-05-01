@@ -16,7 +16,7 @@
         <ul class="w-full" v-for="post in store.blogPosts" :key="post.id">
           <base-card class="mt-9">
             <b>{{ post.title }}</b>
-            <li>Published: {{ post.datePublished }}</li>
+            <!-- <li>Published: {{ post.datePublished }}</li> -->
             <router-link :to="`/posts/${post.id}`" class="flex self-center font-bold bg-blue-500 text-white p-2 rounded-lg
         mt-3 hover:bg-blue-400 hover:scale-96">Read
               more!</router-link>
