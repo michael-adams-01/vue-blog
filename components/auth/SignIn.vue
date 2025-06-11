@@ -5,12 +5,14 @@
       <label for="email">Email: </label>
       <input @focus="clearError" class="border-2 rounded-lg border-gray-300" type="email" id="email"
         v-model.trim="email.val">
+      <h3 class="text-xs font-bold">Demo username: admin@vueBlog.local</h3>
       <p v-if="!email.isValid" class="mt-1 text-red-600">Invalid Email</p>
     </div>
     <div class="form-control">
       <label for="password">Password: </label>
       <input @focus="clearError" class="border-2 rounded-lg border-gray-300" type="password" id="password"
         v-model.trim="password.val">
+      <h3 class="text-xs font-bold">Demo password: admin!</h3>
       <p v-if="!password.isValid" class="mt-1 text-red-600">Incorrect Password</p>
     </div>
     <!-- <p class="text-bold text-red-600 mb-2" v-if="!!errorMessage">{{ errorMessage}}</p> -->
