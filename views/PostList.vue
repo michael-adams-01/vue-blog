@@ -9,7 +9,7 @@
     </div>
     <!-- <h1 v-if="isLoading" class="font-bold animate-pulse">Loading...</h1> -->
     <div v-else>
-      <div class="container grid grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-6 items-center m-4">
+      <div class="mx-auto container grid grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-6 items-center m-4">
         <!-- <div class="flex items-center justify-center h-screen flex-row flex-wrap"> -->
         <ul class="w-full" v-for="post in store.blogPosts" :key="post.id">
           <base-card class="mt-9 text-center flex flex-col text-xl">
