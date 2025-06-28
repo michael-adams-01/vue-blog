@@ -48,7 +48,6 @@ export default {
     async submitData() {
       //validate form data
       this.validateForm();
-      console.log(this.formIsValid)
 
       if (this.titleIsInvalid || this.textIsInvalid) {
         return;
@@ -70,8 +69,6 @@ export default {
         throw error;
       }
 
-
-      await this.store.updateData(this.postTitle, this.postText)
       this.$router.replace(`/posts/${this.$route.params.id}/`)
     },
   },
