@@ -12,14 +12,15 @@
       <div class="container grid grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-6 items-center m-4">
         <!-- <div class="flex items-center justify-center h-screen flex-row flex-wrap"> -->
         <ul class="w-full" v-for="post in store.blogPosts" :key="post.id">
-          <base-card class="mt-9">
+          <base-card class="mt-9 text-center flex flex-col text-xl">
             <b>{{ post.title }}</b>
             <!-- <li>Published: {{ post.datePublished }}</li> -->
-            <router-link :to="`/posts/${post.id}`" class="flex self-center font-bold bg-blue-500 text-white p-2 rounded-lg
-        mt-3 hover:bg-blue-400 hover:scale-96">Read
-              more!</router-link>
+            <router-link :to="`/posts/${post.id}`" class="self-center text-sm font-bold bg-blue-500 text-white p-2 rounded-lg
+        mt-4 hover:bg-blue-400 hover:scale-96">Read
+              more</router-link>
             <!-- Delete Stuff start -->
-            <button v-if="store.isLoggedIn" class="text-xs font-bold text-white bg-red-400 p-1 border rounded-lg m-2"
+            <button v-if="store.isLoggedIn"
+              class="text-xs self-center font-bold text-white bg-red-400 p-1 border rounded-lg m-2"
               @click="confirmDelete(post.title, post.id)">Delete</button>
             <base-modal :open="openDeleteModal">
               <h1>Are you sure you want to delete: <b>{{ deleteTitle }}</b>?</h1>
